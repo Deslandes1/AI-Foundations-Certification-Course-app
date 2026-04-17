@@ -8,32 +8,35 @@ from datetime import datetime
 
 st.set_page_config(page_title="AI Foundations & Certification Course", layout="wide")
 
-# ---------- Language dictionaries ----------
+# ---------- Language data (English, French, Spanish, Portuguese) ----------
 LANGUAGES = {
     "English": {
         "code": "en",
         "voice": "en-US-GuyNeural",
-        "ui": {
-            "login_title": "🔐 Access Required",
-            "login_sub": "28 days to AI mastery – from beginner to certified expert",
-            "login_password": "Enter password to access",
-            "login_btn": "Login",
-            "login_error": "Incorrect password. Access denied.",
-            "sidebar_progress": "Your progress",
-            "sidebar_completed": "of 28",
-            "sidebar_founder": "Founder & Developer:",
-            "sidebar_price_label": "Price",
-            "sidebar_price": "$299 USD (full course – all 28 days, source code, certificate)",
-            "sidebar_logout": "Logout",
-            "day_prefix": "Day",
-            "duration_label": "Duration",
-            "milestone": "🎯 Milestone achieved! Great progress – keep going!",
-            "cert_title": "🏅 Official AI Expert Certificate",
-            "cert_text": "Congratulations! You have completed the AI Foundations & Certification Course.",
-            "cert_btn": "📜 Download Certificate",
-            "congrats_title": "🎓 Congratulations! You are now an AI Certified Expert.",
-            "contact_text": "To continue with advanced courses or get support:",
-            "footer_caption": "🤖 AI Foundations & Certification Course – 28 days to AI mastery."
+        "login_title": "🔐 Access Required",
+        "login_sub": "28 days to AI mastery – from beginner to certified expert",
+        "login_password": "Enter password to access",
+        "login_btn": "Login",
+        "login_error": "Incorrect password. Access denied.",
+        "sidebar_progress": "Your progress",
+        "sidebar_completed": "of 28",
+        "sidebar_founder": "Founder & Developer:",
+        "sidebar_price": "**$299 USD** (full course – all 28 days, source code, certificate)",
+        "sidebar_logout": "Logout",
+        "day_prefix": "Day",
+        "duration_label": "Duration",
+        "milestone": "🎯 **Milestone achieved!** Great progress – keep going!",
+        "cert_title": "🏅 Official AI Expert Certificate",
+        "cert_text": "Congratulations! You have completed the AI Foundations & Certification Course.",
+        "cert_btn": "📜 Download Certificate",
+        "congrats_title": "🎓 Congratulations! You are now an AI Certified Expert.",
+        "contact_text": "To continue with advanced courses or get support:",
+        "footer_caption": "🤖 AI Foundations & Certification Course – 28 days to AI mastery.",
+        "weeks": {
+            1: "Week 1 - AI Foundations & Your Personal Mentor",
+            2: "Week 2 - Creativity & Quiet Skill-Building",
+            3: "Week 3 - Building AI Bots & Smart Automation",
+            4: "Week 4 - Certification & Career Application"
         },
         "lessons": {
             1: {"title": "Meet your AI Mentor - Setting up ChatGPT & Gemini", "duration": "15 min", "content": "Learn how to create accounts, navigate the interfaces, and understand the core capabilities of ChatGPT and Google Gemini. These will be your primary AI assistants throughout the course."},
@@ -69,32 +72,35 @@ LANGUAGES = {
     "French": {
         "code": "fr",
         "voice": "fr-FR-HenriNeural",
-        "ui": {
-            "login_title": "🔐 Accès requis",
-            "login_sub": "28 jours pour maîtriser l'IA – du débutant à l'expert certifié",
-            "login_password": "Entrez le mot de passe pour accéder",
-            "login_btn": "Se connecter",
-            "login_error": "Mot de passe incorrect. Accès refusé.",
-            "sidebar_progress": "Votre progression",
-            "sidebar_completed": "sur 28",
-            "sidebar_founder": "Fondateur et développeur :",
-            "sidebar_price_label": "Prix",
-            "sidebar_price": "299 $ USD (cours complet – 28 jours, code source, certificat)",
-            "sidebar_logout": "Déconnexion",
-            "day_prefix": "Jour",
-            "duration_label": "Durée",
-            "milestone": "🎯 Étape clé atteinte ! Bonne continuation !",
-            "cert_title": "🏅 Certificat officiel d'expert en IA",
-            "cert_text": "Félicitations ! Vous avez terminé le cours « Fondamentaux de l'IA et certification ».",
-            "cert_btn": "📜 Télécharger le certificat",
-            "congrats_title": "🎓 Félicitations ! Vous êtes désormais un expert certifié en IA.",
-            "contact_text": "Pour continuer avec des cours avancés ou obtenir du soutien :",
-            "footer_caption": "🤖 Cours « Fondamentaux de l'IA et certification » – 28 jours pour maîtriser l'IA."
+        "login_title": "🔐 Accès requis",
+        "login_sub": "28 jours pour maîtriser l'IA – du débutant à l'expert certifié",
+        "login_password": "Entrez le mot de passe pour accéder",
+        "login_btn": "Se connecter",
+        "login_error": "Mot de passe incorrect. Accès refusé.",
+        "sidebar_progress": "Votre progression",
+        "sidebar_completed": "sur 28",
+        "sidebar_founder": "Fondateur et développeur :",
+        "sidebar_price": "**299 $ USD** (cours complet – 28 jours, code source, certificat)",
+        "sidebar_logout": "Déconnexion",
+        "day_prefix": "Jour",
+        "duration_label": "Durée",
+        "milestone": "🎯 **Étape clé atteinte !** Bonne continuation – continuez comme ça !",
+        "cert_title": "🏅 Certificat officiel d'expert en IA",
+        "cert_text": "Félicitations ! Vous avez terminé le cours « Fondamentaux de l'IA et certification ».",
+        "cert_btn": "📜 Télécharger le certificat",
+        "congrats_title": "🎓 Félicitations ! Vous êtes désormais un expert certifié en IA.",
+        "contact_text": "Pour continuer avec des cours avancés ou obtenir du soutien :",
+        "footer_caption": "🤖 Cours « Fondamentaux de l'IA et certification » – 28 jours pour maîtriser l'IA.",
+        "weeks": {
+            1: "Semaine 1 - Fondements de l'IA et mentor personnel",
+            2: "Semaine 2 - Créativité et développement de compétences en douceur",
+            3: "Semaine 3 - Création de bots IA et automatisation intelligente",
+            4: "Semaine 4 - Certification et application professionnelle"
         },
         "lessons": {
             1: {"title": "Rencontrez votre mentor IA - Configuration de ChatGPT et Gemini", "duration": "15 min", "content": "Apprenez à créer des comptes, naviguer dans les interfaces et comprendre les capacités de base de ChatGPT et Google Gemini. Ils seront vos principaux assistants IA tout au long du cours."},
             2: {"title": "Le guide du « surpenseur » pour les invites - Obtenez des réponses exactes", "duration": "14 min", "content": "Maîtrisez l'art de formuler des invites précises. Découvrez comment structurer les questions, utiliser le contexte et éviter les pièges courants."},
-            3: {"title": "Claude - Brainstorming et organisation des idées", "duration": "16 min", "content": "Exploitez la force de Claude pour gérer de longs contextes. Utilisez-le pour brainstormer, résumer des documents et organiser des notes éparpillées."},
+            3: {"title": "Claude - Remue-méninges et organisation des idées", "duration": "16 min", "content": "Exploitez la force de Claude pour gérer de longs contextes. Utilisez-le pour générer des idées, résumer des documents et organiser des notes éparpillées."},
             4: {"title": "Perplexity - Recherche Internet intelligente et sans stress", "duration": "12 min", "content": "Utilisez Perplexity AI pour faire des recherches avec citations. Apprenez à poser des questions de suivi et obtenez des informations précises à jour."},
             5: {"title": "IA pour la productivité quotidienne - Gagnez 2 heures par jour", "duration": "15 min", "content": "Moyens pratiques d'intégrer l'IA dans votre routine : rédaction d'emails, priorisation des tâches, résumés de réunions, analyse rapide de données."},
             6: {"title": "Créez votre premier assistant IA personnalisé", "duration": "18 min", "content": "Créez une personnalité IA adaptée à votre rôle. Définissez son ton, son expertise et ses réponses types."},
@@ -106,9 +112,9 @@ LANGUAGES = {
             12: {"title": "ElevenLabs - Voix off professionnelles sans vous enregistrer", "duration": "14 min", "content": "Générez des voix off naturelles à partir de texte. Ajustez le ton, la vitesse, l'émotion."},
             13: {"title": "Assemblez votre première pièce de portfolio générée par IA", "duration": "18 min", "content": "Combinez visuels, voix off et vidéo en une pièce cohérente."},
             14: {"title": "Étape clé - Projet vidéo IA « sans visage »", "duration": "20 min", "content": "Produisez une vidéo complète en utilisant uniquement des actifs générés par IA."},
-            15: {"title": "Bases - Automatisation visuelle sans ligne de code", "duration": "16 min", "content": "Introduction à Zapier et Make : déclencheurs, actions, connexion d'applications."},
+            15: {"title": "Bases - Automatisation visuelle sans ligne de code", "duration": "16 min", "content": "Introduction aux plateformes d'automatisation (Zapier, Make). Déclencheurs, actions, connexion d'applications."},
             16: {"title": "Connectez l'IA à vos applications quotidiennes", "duration": "18 min", "content": "Intégrez l'IA à Google Sheets, Gmail, Slack, etc."},
-            17: {"title": "Make.com - Créez un robot de recherche automatisé", "duration": "15 min", "content": "Bot qui récupère des actualités, résume des articles et envoie des rapports."},
+            17: {"title": "Make.com - Créez un robot de recherche automatisé", "duration": "15 min", "content": "Bot qui récupère des actualités, résume des articles et envoie des rapports programmés."},
             18: {"title": "Présentez vos succès IA à votre manager", "duration": "18 min", "content": "Modèles pour présenter vos automatisations, mesurer le ROI et communiquer la valeur."},
             19: {"title": "Créez un agent de support client IA 24/7", "duration": "20 min", "content": "Chatbot répondant aux questions courantes via OpenAI ou Landbot."},
             20: {"title": "Testez et améliorez votre nouveau bot IA", "duration": "15 min", "content": "Méthodes de test, collecte de retours, itérations."},
@@ -125,27 +131,30 @@ LANGUAGES = {
     "Spanish": {
         "code": "es",
         "voice": "es-ES-AlvaroNeural",
-        "ui": {
-            "login_title": "🔐 Acceso requerido",
-            "login_sub": "28 días para dominar la IA – de principiante a experto certificado",
-            "login_password": "Ingrese la contraseña para acceder",
-            "login_btn": "Iniciar sesión",
-            "login_error": "Contraseña incorrecta. Acceso denegado.",
-            "sidebar_progress": "Tu progreso",
-            "sidebar_completed": "de 28",
-            "sidebar_founder": "Fundador y desarrollador:",
-            "sidebar_price_label": "Precio",
-            "sidebar_price": "$299 USD (curso completo – 28 días, código fuente, certificado)",
-            "sidebar_logout": "Cerrar sesión",
-            "day_prefix": "Día",
-            "duration_label": "Duración",
-            "milestone": "🎯 ¡Hito alcanzado! Sigue así – ¡buen progreso!",
-            "cert_title": "🏅 Certificado oficial de experto en IA",
-            "cert_text": "¡Felicitaciones! Has completado el curso «Fundamentos de IA y certificación».",
-            "cert_btn": "📜 Descargar certificado",
-            "congrats_title": "🎓 ¡Felicitaciones! Ahora eres un experto certificado en IA.",
-            "contact_text": "Para continuar con cursos avanzados o recibir apoyo:",
-            "footer_caption": "🤖 Curso «Fundamentos de IA y certificación» – 28 días para dominar la IA."
+        "login_title": "🔐 Acceso requerido",
+        "login_sub": "28 días para dominar la IA – de principiante a experto certificado",
+        "login_password": "Ingrese la contraseña para acceder",
+        "login_btn": "Iniciar sesión",
+        "login_error": "Contraseña incorrecta. Acceso denegado.",
+        "sidebar_progress": "Tu progreso",
+        "sidebar_completed": "de 28",
+        "sidebar_founder": "Fundador y desarrollador:",
+        "sidebar_price": "**$299 USD** (curso completo – 28 días, código fuente, certificado)",
+        "sidebar_logout": "Cerrar sesión",
+        "day_prefix": "Día",
+        "duration_label": "Duración",
+        "milestone": "🎯 **¡Hito alcanzado!** Sigue así – ¡buen progreso!",
+        "cert_title": "🏅 Certificado oficial de experto en IA",
+        "cert_text": "¡Felicitaciones! Has completado el curso «Fundamentos de IA y certificación».",
+        "cert_btn": "📜 Descargar certificado",
+        "congrats_title": "🎓 ¡Felicitaciones! Ahora eres un experto certificado en IA.",
+        "contact_text": "Para continuar con cursos avanzados o recibir apoyo:",
+        "footer_caption": "🤖 Curso «Fundamentos de IA y certificación» – 28 días para dominar la IA.",
+        "weeks": {
+            1: "Semana 1 - Fundamentos de IA y mentor personal",
+            2: "Semana 2 - Creatividad y desarrollo de habilidades tranquilas",
+            3: "Semana 3 - Creación de bots IA y automatización inteligente",
+            4: "Semana 4 - Certificación y aplicación profesional"
         },
         "lessons": {
             1: {"title": "Conoce a tu mentor IA - Configuración de ChatGPT y Gemini", "duration": "15 min", "content": "Aprende a crear cuentas, navegar por las interfaces y comprender las capacidades básicas de ChatGPT y Google Gemini."},
@@ -162,7 +171,7 @@ LANGUAGES = {
             12: {"title": "ElevenLabs - Locuciones profesionales sin grabarte", "duration": "14 min", "content": "Genera locuciones naturales a partir de texto. Ajusta tono, velocidad, emoción."},
             13: {"title": "Ensambla tu primera pieza de portafolio generada por IA", "duration": "18 min", "content": "Combina imágenes, locución y video en una pieza coherente."},
             14: {"title": "Hito - Completa tu proyecto de video IA «sin rostro»", "duration": "20 min", "content": "Produce un video completo usando solo activos generados por IA."},
-            15: {"title": "Bases - Automatización visual sin una línea de código", "duration": "16 min", "content": "Introducción a Zapier y Make: disparadores, acciones, conexión de aplicaciones."},
+            15: {"title": "Bases - Automatización visual sin una línea de código", "duration": "16 min", "content": "Introducción a plataformas de automatización (Zapier, Make). Disparadores, acciones, conexión de aplicaciones."},
             16: {"title": "Conecta IA a tus aplicaciones cotidianas favoritas", "duration": "18 min", "content": "Integra IA con Google Sheets, Gmail, Slack, etc."},
             17: {"title": "Make.com - Construye un bot investigador automatizado", "duration": "15 min", "content": "Bot que obtiene noticias, resume artículos y envía informes programados."},
             18: {"title": "Cómo presentar los logros de IA a tu jefe", "duration": "18 min", "content": "Plantillas para mostrar tus automatizaciones, medir el ROI y comunicar el valor."},
@@ -181,27 +190,30 @@ LANGUAGES = {
     "Portuguese": {
         "code": "pt",
         "voice": "pt-BR-FranciscaNeural",
-        "ui": {
-            "login_title": "🔐 Acesso necessário",
-            "login_sub": "28 dias para dominar a IA – do iniciante ao especialista certificado",
-            "login_password": "Digite a senha para acessar",
-            "login_btn": "Entrar",
-            "login_error": "Senha incorreta. Acesso negado.",
-            "sidebar_progress": "Seu progresso",
-            "sidebar_completed": "de 28",
-            "sidebar_founder": "Fundador e desenvolvedor:",
-            "sidebar_price_label": "Preço",
-            "sidebar_price": "$299 USD (curso completo – 28 dias, código fonte, certificado)",
-            "sidebar_logout": "Sair",
-            "day_prefix": "Dia",
-            "duration_label": "Duração",
-            "milestone": "🎯 Meta alcançada! Bom progresso – continue assim!",
-            "cert_title": "🏅 Certificado oficial de especialista em IA",
-            "cert_text": "Parabéns! Você concluiu o curso «Fundamentos de IA e certificação».",
-            "cert_btn": "📜 Baixar certificado",
-            "congrats_title": "🎓 Parabéns! Agora você é um especialista certificado em IA.",
-            "contact_text": "Para continuar com cursos avançados ou obter suporte:",
-            "footer_caption": "🤖 Curso «Fundamentos de IA e certificação» – 28 dias para dominar a IA."
+        "login_title": "🔐 Acesso necessário",
+        "login_sub": "28 dias para dominar a IA – do iniciante ao especialista certificado",
+        "login_password": "Digite a senha para acessar",
+        "login_btn": "Entrar",
+        "login_error": "Senha incorreta. Acesso negado.",
+        "sidebar_progress": "Seu progresso",
+        "sidebar_completed": "de 28",
+        "sidebar_founder": "Fundador e desenvolvedor:",
+        "sidebar_price": "**$299 USD** (curso completo – 28 dias, código fonte, certificado)",
+        "sidebar_logout": "Sair",
+        "day_prefix": "Dia",
+        "duration_label": "Duração",
+        "milestone": "🎯 **Meta alcançada!** Bom progresso – continue assim!",
+        "cert_title": "🏅 Certificado oficial de especialista em IA",
+        "cert_text": "Parabéns! Você concluiu o curso «Fundamentos de IA e certificação».",
+        "cert_btn": "📜 Baixar certificado",
+        "congrats_title": "🎓 Parabéns! Agora você é um especialista certificado em IA.",
+        "contact_text": "Para continuar com cursos avançados ou obter suporte:",
+        "footer_caption": "🤖 Curso «Fundamentos de IA e certificação» – 28 dias para dominar a IA.",
+        "weeks": {
+            1: "Semana 1 - Fundamentos de IA e mentor pessoal",
+            2: "Semana 2 - Criatividade e desenvolvimento de habilidades tranquilas",
+            3: "Semana 3 - Criação de bots IA e automação inteligente",
+            4: "Semana 4 - Certificação e aplicação profissional"
         },
         "lessons": {
             1: {"title": "Conheça seu mentor IA - Configurando ChatGPT e Gemini", "duration": "15 min", "content": "Aprenda a criar contas, navegar pelas interfaces e entender as capacidades básicas do ChatGPT e Google Gemini."},
@@ -218,7 +230,7 @@ LANGUAGES = {
             12: {"title": "ElevenLabs - Narrações profissionais sem se gravar", "duration": "14 min", "content": "Gere narrações naturais a partir de texto. Ajuste tom, velocidade, emoção."},
             13: {"title": "Monte sua primeira peça de portfólio gerada por IA", "duration": "18 min", "content": "Combine visuais, narração e vídeo em uma peça coesa."},
             14: {"title": "Marco - Complete seu projeto de vídeo IA «sem rosto»", "duration": "20 min", "content": "Produza um vídeo completo usando apenas ativos gerados por IA."},
-            15: {"title": "Bases - Automação visual sem uma linha de código", "duration": "16 min", "content": "Introdução ao Zapier e Make: gatilhos, ações, conexão de aplicativos."},
+            15: {"title": "Bases - Automação visual sem uma linha de código", "duration": "16 min", "content": "Introdução a plataformas de automação (Zapier, Make). Gatilhos, ações, conexão de aplicativos."},
             16: {"title": "Conecte IA aos seus aplicativos diários favoritos", "duration": "18 min", "content": "Integre IA com Google Sheets, Gmail, Slack e outras ferramentas."},
             17: {"title": "Make.com - Construa um bot pesquisador automatizado", "duration": "15 min", "content": "Bot que obtém notícias, resume artigos e envia relatórios agendados."},
             18: {"title": "Como apresentar vitórias da IA ao seu gerente", "duration": "18 min", "content": "Modelos para mostrar suas automações, medir ROI e comunicar valor."},
@@ -278,97 +290,70 @@ def show_logo():
         </div>
     """, unsafe_allow_html=True)
 
-def generate_audio(text, output_path, voice):
-    cmd = ["edge-tts", "--voice", voice, "--text", text, "--write-media", output_path]
-    try:
-        subprocess.run(cmd, check=True, capture_output=True, text=True, timeout=30)
-    except Exception as e:
-        st.error(f"Audio error: {e}")
-
-def play_audio(text, key, voice):
-    if st.button(f"🔊", key=key):
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
-            generate_audio(text, tmp.name, voice)
-            with open(tmp.name, "rb") as f:
-                audio_bytes = f.read()
-                b64 = base64.b64encode(audio_bytes).decode()
-                st.markdown(f'<audio controls src="data:audio/mp3;base64,{b64}" autoplay style="width: 100%;"></audio>', unsafe_allow_html=True)
-            os.unlink(tmp.name)
-
 # ---------- Authentication ----------
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
 if "lang" not in st.session_state:
     st.session_state.lang = "English"
 
-def set_language():
-    pass
-
 if not st.session_state.authenticated:
     set_tech_style()
-    st.title("🔐 Access Required")
+    lang = st.session_state.lang
+    st.title(LANGUAGES[lang]["login_title"])
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         show_logo()
         st.markdown("<h2 style='text-align: center;'>AI Foundations & Certification Course</h2>", unsafe_allow_html=True)
-        st.markdown(f"<p style='text-align: center; color: #00d4ff;'>{LANGUAGES[st.session_state.lang]['ui']['login_sub']}</p>", unsafe_allow_html=True)
-        password_input = st.text_input(LANGUAGES[st.session_state.lang]['ui']['login_password'], type="password")
-        if st.button(LANGUAGES[st.session_state.lang]['ui']['login_btn']):
+        st.markdown(f"<p style='text-align: center; color: #00d4ff;'>{LANGUAGES[lang]['login_sub']}</p>", unsafe_allow_html=True)
+        password_input = st.text_input(LANGUAGES[lang]["login_password"], type="password")
+        if st.button(LANGUAGES[lang]["login_btn"]):
             if password_input == "20082010":
                 st.session_state.authenticated = True
                 st.rerun()
             else:
-                st.error(LANGUAGES[st.session_state.lang]['ui']['login_error'])
+                st.error(LANGUAGES[lang]["login_error"])
     st.stop()
 
 # ---------- Main app after login ----------
 set_tech_style()
+lang = st.session_state.lang
+ui = LANGUAGES[lang]
+
+# Language selector in sidebar
 with st.sidebar:
     st.image("https://flagcdn.com/w320/ht.png", width=60)
-    st.selectbox("🌐 Language", options=list(LANGUAGES.keys()), key="lang", on_change=set_language)
+    st.selectbox("🌐 Language", options=list(LANGUAGES.keys()), key="lang")
     st.markdown("---")
     show_logo()
-    st.markdown(f"## 🎯 {LANGUAGES[st.session_state.lang]['ui']['day_prefix']}")
-    day_number = st.selectbox("", list(range(1, 29)), index=0, label_visibility="collapsed")
+    st.markdown("## 🎯 Select a day")
+    day_number = st.selectbox("Day", list(range(1, 29)), index=0, label_visibility="collapsed")
     st.markdown("---")
-    st.markdown(f"### 📚 {LANGUAGES[st.session_state.lang]['ui']['sidebar_progress']}")
+    st.markdown(f"### 📚 {ui['sidebar_progress']}")
     st.progress(day_number / 28)
-    st.markdown(f"✅ {LANGUAGES[st.session_state.lang]['ui']['day_prefix']} {day_number} {LANGUAGES[st.session_state.lang]['ui']['sidebar_completed']}")
+    st.markdown(f"✅ {ui['day_prefix']} {day_number} {ui['sidebar_completed']}")
     st.markdown("---")
-    st.markdown(f"**{LANGUAGES[st.session_state.lang]['ui']['sidebar_founder']}**")
+    st.markdown(f"**{ui['sidebar_founder']}**")
     st.markdown("Gesner Deslandes")
     st.markdown("📞 WhatsApp: (509) 4738-5663")
     st.markdown("📧 Email: deslandes78@gmail.com")
     st.markdown("🌐 [Main website](https://globalinternetsitepy-abh7v6tnmskxxnuplrdcgk.streamlit.app/)")
     st.markdown("---")
-    st.markdown(f"### 💰 {LANGUAGES[st.session_state.lang]['ui']['sidebar_price_label']}")
-    st.markdown(LANGUAGES[st.session_state.lang]['ui']['sidebar_price'])
+    st.markdown("### 💰 Price")
+    st.markdown(ui['sidebar_price'])
     st.markdown("---")
     st.markdown("### © 2025 GlobalInternet.py")
     st.markdown("All rights reserved")
     st.markdown("---")
-    if st.button(f"🚪 {LANGUAGES[st.session_state.lang]['ui']['sidebar_logout']}", use_container_width=True):
+    if st.button(f"🚪 {ui['sidebar_logout']}", use_container_width=True):
         st.session_state.authenticated = False
         st.rerun()
 
 # ---------- Display current lesson ----------
-lang = st.session_state.lang
-ui = LANGUAGES[lang]["ui"]
-voice = LANGUAGES[lang]["voice"]
-lessons = LANGUAGES[lang]["lessons"]
-
 week_num = (day_number - 1) // 7 + 1
-week_titles = {
-    1: "Week 1 - AI Foundations & Your Personal Mentor",
-    2: "Week 2 - Creativity & Quiet Skill-Building",
-    3: "Week 3 - Building AI Bots & Smart Automation",
-    4: "Week 4 - Certification & Career Application"
-}
-week_title = week_titles[week_num]
-
-day_title = lessons[day_number]["title"]
-duration = lessons[day_number]["duration"]
-content = lessons[day_number]["content"]
+week_title = ui['weeks'][week_num]
+day_title = ui['lessons'][day_number]["title"]
+duration = ui['lessons'][day_number]["duration"]
+content = ui['lessons'][day_number]["content"]
 
 st.markdown(f"## 📅 {week_title}")
 st.markdown(f"### {ui['day_prefix']} {day_number}: {day_title}")
@@ -377,7 +362,24 @@ st.markdown("---")
 st.markdown(content)
 
 # Audio for the lesson content
-play_audio(f"{ui['day_prefix']} {day_number}: {day_title}. {content}", f"audio_{day_number}_{lang}", voice)
+def generate_audio(text, output_path, voice):
+    cmd = ["edge-tts", "--voice", voice, "--text", text, "--write-media", output_path]
+    try:
+        subprocess.run(cmd, check=True, capture_output=True, text=True, timeout=30)
+    except Exception as e:
+        st.error(f"Audio error: {e}")
+
+def play_audio(text, key, voice):
+    if st.button(f"🔊 Listen to lesson", key=key):
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
+            generate_audio(text, tmp.name, voice)
+            with open(tmp.name, "rb") as f:
+                audio_bytes = f.read()
+                b64 = base64.b64encode(audio_bytes).decode()
+                st.markdown(f'<audio controls src="data:audio/mp3;base64,{b64}" autoplay style="width: 100%;"></audio>', unsafe_allow_html=True)
+            os.unlink(tmp.name)
+
+play_audio(f"{ui['day_prefix']} {day_number}: {day_title}. {content}", f"audio_{day_number}_{lang}", ui['voice'])
 
 # Milestone indicator
 if day_number in [7, 14, 21, 28]:
